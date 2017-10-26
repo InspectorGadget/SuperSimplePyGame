@@ -4,7 +4,7 @@ import random
 def onrun():
 
     number = random.randint(0, 10000000000000000000000000000000000000000000000)
-    tries = 1
+    tries = int(1)
 
     question = input("Would you like to play a game? [Y/N]")
 
@@ -21,7 +21,7 @@ def onrun():
                 onrun()
             else:
                 if again.lower() == "n":
-                    print("You ended this game with " + tries + " tries!")
+                    print("You ended this game with " + str(tries) + " tries!")
         if guess >= number:
             print("Guess Higher, try again! :D")
             again = input("Wanna try again? [Y/N]")
@@ -30,7 +30,7 @@ def onrun():
                 onrun()
             else:
                 if again.lower() == "n":
-                    print("You ended this game with " + tries + " tries!")
+                    print("You ended this game with " + str(tries) + " tries!")
         if guess == number:
             print("Oops, you actually guessed correctly!")
             print("---GAME OVER---")
@@ -42,7 +42,7 @@ def onrun():
             else:
                 if ask.lower() == "n":
                     print("Okay, bye!")
-                    print("You ended this game with " + tries + " tries!")
+                    print("You ended this game with " + str(tries) + " tries!")
 
 
 print("Welcome to InspectorGadget's Python Game!")
@@ -50,6 +50,3 @@ username = input("Hello! What is your username? ")
 print("Welcome, " + username + "!")
 
 onrun()
-
-
-
